@@ -5,6 +5,15 @@ wrapped in modern tooling: a browser-based world explorer, a playable
 in-browser game backed by a real Z-machine interpreter, and a build
 pipeline using the modern ZILF toolchain.
 
+<p align="center">
+  <img src="screenshots/map.png"    width="49%" alt="Map tab — force-directed graph of all 75 rooms, colored by region">
+  <img src="screenshots/room.png"   width="49%" alt="Room browser — exits, objects, and syntax-highlighted ZIL source">
+</p>
+<p align="center">
+  <img src="screenshots/syntax.png" width="49%" alt="Syntax tab — the verb grammar with actions and pre-actions">
+  <img src="screenshots/play.png"   width="49%" alt="Play tab — the real game running in dfrotz, with live room tracking">
+</p>
+
 The original historical README claimed there was "no known way to compile"
 this source. Today the modern ZILF toolchain (`zilf` + `zapf`) targets
 exactly this dialect, and this repo carries what appear to be its
