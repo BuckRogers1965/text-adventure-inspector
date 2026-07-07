@@ -42,11 +42,33 @@ source and tells you how it went.)
 
 ## Running it
 
+**Step 1 — scan the ZIL source and build the world model:**
+
+```
+python3 tools/build_viewer.py
+```
+
+This parses all thirteen `.zil` files and extracts everything the explorer
+navigates — rooms, objects, exits (with their conditions), routines with
+their source text, globals, constants, the verb grammar, and the full
+vocabulary — into `viewer/world.js`. It prints a summary when it's done:
+
+```
+rooms: 75  objects: 192  routines: 783  globals: 343  verbs: ...  words: ...
+wrote .../viewer/world.js
+```
+
+A pre-generated `world.js` ships in the repo, so this step is only
+*required* after you edit a `.zil` file — but run it once anyway to see
+the pipeline work.
+
+**Step 2 — start the server:**
+
 ```
 python3 tools/server.py
 ```
 
-Then browse to `http://<server-ip>:8083/`.
+**Step 3 —** browse to `http://<server-ip>:8083/`.
 
 By default the server binds **0.0.0.0:8083** — reachable from every
 machine on your network, not just localhost. To change either:
@@ -62,8 +84,7 @@ dfrotz is installed, rebuilds the story file from source if it's missing
 `--port`/`--bind` flags plus `--background` to daemonize (writes
 `server.pid`/`server.log`; stop with `kill $(cat server.pid)`).
 
-In-game saves land in `saves/`. Rebuild `viewer/world.js` after editing
-any `.zil` file: `python3 tools/build_viewer.py`.
+In-game saves land in `saves/`.
 
 **RUNNING.md** is the always-current authority if these instructions
 ever drift.
