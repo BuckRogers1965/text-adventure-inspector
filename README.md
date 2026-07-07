@@ -120,8 +120,14 @@ development systems (the "historical source" archives) — canonical but not
 necessarily identical to any shipped release. It is preserved here for
 education, discussion, and historical research, and is **not under an open
 license**; Leather Goddesses of Phobos is © 1986–1988 Infocom, Inc.
-(Activision). The tooling (`tools/`, `viewer/`) is original work of this
-repository.
+(Activision).
+
+The tooling — everything under `tools/` and `viewer/` — is original work
+of this repository and is **MIT licensed** (see `tools/LICENSE` and
+`viewer/LICENSE`). The generated `viewer/world.js` contains game text and
+data extracted from the ZIL source; the MIT grant covers the extraction
+and viewer code, not that game content. There is deliberately no LICENSE
+file at the repo root, so nobody mistakes the game itself for open-source.
 
 Further reading:
 [Wikipedia](https://en.wikipedia.org/wiki/Leather_Goddesses_of_Phobos) ·
